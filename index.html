@@ -10,39 +10,48 @@
 <body>
     <div id="leftSide">
         <div id="logoContainer">
-            <h1>Budget<span>Buddy</span></h1>
+            <h1>BUDGET<span> BUDDY</span></h1>
             <h2>Your personal finance tracker</h2>
         </div>
         <div id="background"></div>
     </div>
     <div id="rightSide">
         <div class="topBottom" id="top">
-            <h2>Join BudgetBuddy and get your finances on track today</h2>
+            <h2>Are you ready to take control of your financial journey? <br><br>Sign up now to unlock a world of smart budgeting, intuitive expense tracking, and personalized financial insights.</h2>
             <h3>You know you want to.</h3>
         </div>
         <div id="formContainer">
-            <h2>Account Information</h2>
-            <form action="#" method="post">
-                <label for="first_name">First Name:</label>
-                <input type="text" id="first_name">
+            <div id="form">
+                <h2>Account Information</h2>
+                <form action="#" method="post" id="inputs">
+                    <div id="leftForm">
+                        <label for="first_name">FIRST NAME</label>
+                        <input type="text" id="first_name" name="first_name">
 
-                <label for="first_name">Last Name:</label>
-                <input type="text" id="last_name">
+                        <label for="email">EMAIL</label>
+                        <input type="email" id="email" name="email">
 
-                <label for="email">Email:</label>
-                <input type="email" id="email">
+                        <label for="password">PASSWORD </label>
+                        <input type="password" id="password" name="password">
+                    </div>
+                    <div id="rightForm">
+                        <label for="last_name">LAST NAME</label>
+                        <input type="text" id="last_name" name="last_name">
 
-                <label for="password">Password: </label>
-                <input type="password" id="password">
+                        <label for="phone-number">PHONE NUMBER </label>
+                        <input type="number" id="phone-number" name="phone-number">
 
-                <label for="confirm-password">Confirm Password:</label>
-                <input type="password" id="confirm-password">
+                        <label for="confirm-password">CONFIRM PASSWORD</label>
+                        <input type="password" id="confirm-password" name="confirm-password">
+                    </div>
+                </div>
+                <div class="topBottom" id="bottom">
+                    <button type="submit">Create Account</button>
+                    <h2>Already have an account?  <a id="login" href="https://nichorito.github.io/Landing-Page/">Log In</a></h2>
+                </div>
             </form>
         </div>
-        <div class="topBottom" id="bottom">
-            <button type="submit">Create Account</button>
-            <h2>Already have an account?<a id="login">Log In</a></h2>
-        </div>
+        
     </div>
 </body>
 </html>
