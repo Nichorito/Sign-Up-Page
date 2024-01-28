@@ -2,9 +2,17 @@
     --red: #EC5A64;
     --blue: #8FD6E8;
     --green: #D4FF9D;
-    --backgroundColor: #03131A;
+    --backgroundColor: #E5E7EB;
+    --form-bg: white;
+    --box-shadow: #a8aaad;
+
+    --pop-text: black;
     
-    
+    --switch-bg: #d5d5d8;
+    --switch-circle-bg: #FFD371;
+    --icon-sun: #997F44;
+    --icon-moon: #B1B0B5;
+    --switch-circle-pos: 0.22rem;
 }
 
 input::-webkit-outer-spin-button,
@@ -67,17 +75,67 @@ h1 > span {
     font-weight: bolder;
 }
 
-/*/////////////// RIGHT SIDE////////////*/
+/*////////////////////////////////////////
+//////           RIGHT SIDE        //////
+///////////////////////////////////////*/
 
 #rightSide {
-    color: black;
-    background-color: #f9fafb;
+    color: var(--pop-text);
+    background-color: var(--backgroundColor);
     display: flex;
     flex-direction: column;
     flex: 1.9;
     height: 100vh;
+    position: relative;
 }
 
+
+/*////////// THEME SWITCHER  ////////*/
+#theme-switcher {
+    background-color: var(--switch-bg);
+    position: absolute;
+    z-index: 1;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    cursor: pointer;
+    height: 2rem;
+    width: 3.5rem;
+    padding: 0.3rem 0.66rem;
+    z-index: 1;
+
+    top: 3%;
+    right: 3%;
+}
+
+#theme-switcher svg {
+    z-index: 2;
+}
+
+#theme-switcher::before {
+    content: '';
+    position: absolute;
+    width: 2.22rem;
+    height: 2.22rem;
+    background-color: var(--switch-circle-bg);
+    border-radius: 50px;
+    left: 0;
+    transform: translateX(var(--switch-circle-pos));
+}
+
+#sun {
+    fill: var(--icon-sun);
+    width: 80%;
+}
+
+#moon {
+    fill: var(--icon-moon);
+    width: 100%;
+}
+
+
+/* //////////// TOP SECTION //////////*/
 #top {
     display: flex;
     width: 70%;
@@ -97,8 +155,9 @@ h1 > span {
 #form {
     height: fit-content;
     padding: .5% 5%;
-    background-color: white;
-    box-shadow: 5px 10px 8px #E5E7EB;
+    background-color: var(--form-bg);
+    opacity: 100%;
+    box-shadow: 5px 10px 8px var(--box-shadow);
 }
 
 #bottom {
@@ -135,6 +194,7 @@ input {
     margin-bottom: 30px;
     border-radius: 6px;
     border: 2px solid #E5E7EB;
+    color: var(--pop-text);
 }
 
 input:invalid {
@@ -143,14 +203,15 @@ input:invalid {
 
 input:focus {
     border: 1px solid rgba(0, 0, 255, 0.199);
-    box-shadow: 5px 5px 10px #E5E7EB;
+    box-shadow: 5px 5px 10px var(--box-shadow);
     outline: none;
 }
 
 label {
     font-size: 13px;
     font-weight: 500;
-    color: #000000c2;
+    opacity: 50%;
+    color: var(--pop-text);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     letter-spacing: 1px;
 }
@@ -185,7 +246,7 @@ button:hover {
 }
 
 h2 {
-    font-size: 1vw;
+    font-size: 1.2vw;
 }
 
 #login:hover {
