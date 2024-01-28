@@ -20,3 +20,26 @@ confirmPassword.addEventListener("input", function () {
         console.log('the passwords dont match')
     }
 })
+
+
+////////////// THEME SWITCHER //////////////////
+
+//Switch Function
+const switchTheme = () => {
+    //Get root element and data-theme value
+    const rootElem = document.documentElement;
+    let dataTheme = rootElem.getAttribute('data-theme');
+    let newTheme;
+
+    newTheme = (dataTheme === 'light') ? 'dark' : 'light';
+
+    //Set new HTML attribute
+    rootElem.setAttribute('data-theme', newTheme);
+
+    //Set the new local storage item
+    localStorage.setItem('theme', newTheme)
+
+}
+
+//Add event Listener for the theme switcher 
+document.querySelector('#theme-switcher').addEventListener('click', switchTheme);

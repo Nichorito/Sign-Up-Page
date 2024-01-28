@@ -1,8 +1,21 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script >
+        //Check local storage
+        let localS = localStorage.getItem('theme')
+        themeToSet = localS;
+
+        // If local storage is not set, check the OS preference
+        if (!localS) {
+            themeToSet = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+
+        //Set correct theme
+        document.documentElement.setAttribute('data-theme', themeToSet)
+    </script>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
     <title>Sign Up</title>
