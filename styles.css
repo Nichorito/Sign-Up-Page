@@ -33,6 +33,7 @@
 }
 
 :root {
+    box-sizing: border-box;
     --default-transition: color .3s ease-in-out, background-color .3s ease-in-out, border-color .3s ease-in-out, fill .3s ease-in-out, transform .3s ease-in-out;
 }
 
@@ -203,6 +204,7 @@ h1 > span {
 #leftForm {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     width: 40%;
     gap: 5px;
     margin-bottom: 20px;
@@ -211,8 +213,11 @@ h1 > span {
 #rightForm {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+
     width: 40%;
     gap: 5px;
+    margin-bottom: 20px;
 }
 
 input {
@@ -224,6 +229,8 @@ input {
     background-color: var(--form-bg);
     border: 2px solid var(--input-border);
     color: var(--pop-text);
+    outline: none;
+    box-sizing: border-box;
 }
 
 input:invalid {
@@ -231,9 +238,8 @@ input:invalid {
 }
 
 input:focus {
-    border: 1px solid rgba(0, 0, 255, 0.199);
-    box-shadow: 5px 5px 10px var(--box-shadow);
-    outline: none;
+    border: 2px solid rgba(0, 0, 255, 0.199);
+    /*box-shadow: 5px 5px 10px var(--box-shadow);*/
 }
 
 label {
