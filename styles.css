@@ -142,7 +142,7 @@ input:invalid {
 }
 
 input:focus {
-    border: 2px solid rgba(0, 0, 255, 0.199);
+    border: 1px solid rgba(0, 0, 255, 0.199);
     box-shadow: 5px 5px 10px #E5E7EB;
     outline: none;
 }
