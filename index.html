@@ -26,23 +26,23 @@
                 <form action="#" method="post" id="inputs">
                     <div id="leftForm">
                         <label for="first_name">FIRST NAME</label>
-                        <input type="text" id="first_name" name="first_name">
+                        <input type="text" id="first_name" name="first_name" >
 
                         <label for="email">EMAIL</label>
-                        <input type="email" id="email" name="email">
+                        <input type="email" id="email" name="email" >
 
                         <label for="password">PASSWORD </label>
-                        <input type="password" id="password" name="password">
+                        <input type="password" id="password" name="password" title="Password must be at least 5 characters long and include a special character.  Ex: !, ?, #, etc" required>
                     </div>
                     <div id="rightForm">
                         <label for="last_name">LAST NAME</label>
-                        <input type="text" id="last_name" name="last_name">
+                        <input type="text" id="last_name" name="last_name" >
 
                         <label for="phone-number">PHONE NUMBER </label>
-                        <input type="number" id="phone-number" name="phone-number">
+                        <input type="tel" id="phone-number" name="phone-number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" maxlength="12" placeholder="xxx-xxx-xxxx" title="Please enter a valid number, example: 702-465-8347">
 
                         <label for="confirm-password">CONFIRM PASSWORD</label>
-                        <input type="password" id="confirm-password" name="confirm-password">
+                        <input type="password" id="confirm-password" name="confirm-password" title="Paswords must match" required>
                     </div>
                 </div>
                 <div class="topBottom" id="bottom">
